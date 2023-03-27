@@ -11,17 +11,17 @@ import com.pedrodelfino.course.repositories.UserRepository;
 
 @Service
 public class UserService {
-	
+
 	@Autowired
 	private UserRepository repository;
-	
-	public List<User> findAll(){
+
+	public List<User> findAll() {
 		return repository.findAll();
 	}
-	
+
 	public User findById(Long Id) {
 		Optional<User> obj = repository.findById(Id);
-		
+
 		return obj.get();
 	}
 }
